@@ -9,3 +9,4 @@ helm install fluent-bit fluent/fluent-bit --namespace=elf
 helm install kibana elastic/kibana --version=7.9.0 --namespace=ommega --set service.type=LoadBalancer
 kubectl run random-logger --image=chentex/random-logger -n ommega
 kubectl apply -f ingress.yaml -n ommega
+kubectl create -n omegaa clusterrolebinding jenkins --clusterrole cluster-admin --serviceaccount=jenkins:default
