@@ -29,6 +29,7 @@ spec:
               container('kubectl') {
                   sh '''
 			source elastic.sh
+			kubectl --token=$TOKEN get all -n ommega
 		      '''
               }
           }
