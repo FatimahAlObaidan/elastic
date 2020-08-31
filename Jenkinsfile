@@ -28,19 +28,10 @@ spec:
           steps {
               container('kubectl') {
                   sh '''
-		      kubectl --token=$TOKEN create namespace omegaa       
+			source elastic.sh
 		      '''
               }
           }
       }
-        stage('helm-deploy') {
-	  steps {
-                  container('helm') {
-                      sh '''
-			source elastic.sh
-		    '''
-                    }
-            }
-}
 }
 }
