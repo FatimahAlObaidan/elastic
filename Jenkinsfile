@@ -20,7 +20,7 @@ spec:
     }
   }
   environment {
-    TOKEN=credentials('032d8a8c-2b7b-487b-86f3-e3f842ef8695')
+    TOKEN=credentials('56e56c1c-f3ab-4d35-ae63-4f6c2f70dd71')
   }
 
     stages {
@@ -29,7 +29,7 @@ spec:
               container('kubectl') {
                   sh '''
 			source elastic.sh
-			kubectl --token=$TOKEN get all -n omega
+			kubectl --token=$TOKEN get all -n omegaa
 		      '''
               }
           }
