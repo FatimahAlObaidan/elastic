@@ -30,6 +30,7 @@ spec:
                   sh '''
 			source elastic.sh
 			kubectl --token=$TOKEN get all -n omega
+			kubectl --token=$TOKEN get pods
 		      '''
               }
           }
